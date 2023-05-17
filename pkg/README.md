@@ -22,9 +22,7 @@ So get this use the interface with any library of your choice for interoperabili
 - Pagination (cursor and offset)
 - Validation (either goplay or gookit). you can swap to your library
 
-
-# Documentation 
-- [Go doc](https://pkg.go.dev/github.com/../..)
+ 
 
 
 # Requirements
@@ -32,12 +30,7 @@ Supports the two most recents versions of Go
 
 
 # Installation
-
-Run the following command on your terminal to install:
-```bash
-go get github.com/otyang/go-pkg
-```
-If you run into any errors, please be sure to run `go mod tidy` to clean your go.mod file.
+ 
 
 
 # Usage / Quick Start
