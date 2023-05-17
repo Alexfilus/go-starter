@@ -1,5 +1,5 @@
 # Endpoints
-If you use the vscode editor, you can refer to [vscode.http](/vscode.http) to easily test the rest-api.
+If you use the vscode editor, you can refer to [vscode.http](https://github.com/otyang/go-starter/blob/main/cmd/zample/vscode.http) to easily test the rest-api.
 
 If you dont use the vscode editor, you can use the following endpoints to test:
 
