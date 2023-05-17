@@ -15,9 +15,10 @@ This starter kit is designed to get you up and running with a project structure 
 - Docker:	[Docker](https://www.docker.com/)
 - Logging: [Golang slog](golang.org/x/exp/slog) 
 - Routing: [gofiber](https://github.com/gofiber/fiber)
+- Messaging: [Nats](https://github.com/nats-io/nats.go) 
 - Tests:  [Testify](https://github.com/stretchr/testify)
 - Database Access:	[Bun](https://github.com/uptrace/bun)
-- Cache Access (Redis or Memory):	[Eko Go Cache](https://github.com/eko/gocache)
+- Cache Access (Redis or Memory): [Redis/Rueids](https://github.com/redis/rueidis) OR [Patrick gocache](https://github.com/patrickmn/go-cache)
 - Data validation: [gookit - validate](https://github.com/gookit/validate) OR [go-playground](https://github.com/go-playground/validator)
 
 
