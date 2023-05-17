@@ -3,8 +3,8 @@ package bun
 import (
 	"context"
 
-	"github.com/otyang/go-pkg/datastore"
-	"github.com/otyang/yasante/internal/zample/entity"
+	"github.com/otyang/go-starter/internal/zample/entity"
+	"github.com/otyang/go-starter/pkg/datastore"
 )
 
 var _ entity.IRepository = (entity.IRepository)(nil)

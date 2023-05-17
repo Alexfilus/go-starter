@@ -4,9 +4,9 @@ import (
 	"context"
 	"flag"
 
-	"github.com/otyang/yasante/config"
-	"github.com/otyang/yasante/internal/middleware"
-	"github.com/otyang/yasante/internal/zample"
+	"github.com/otyang/go-starter/config"
+	"github.com/otyang/go-starter/internal/middleware"
+	"github.com/otyang/go-starter/internal/zample"
 )
 
 func main() {

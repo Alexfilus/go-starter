@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/response"
+	"github.com/otyang/go-starter/pkg/response"
 )
 
 func AuthRequired() fiber.Handler {

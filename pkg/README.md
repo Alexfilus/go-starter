@@ -60,7 +60,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/otyang/go-pkg/config"
+	"github.com/otyang/go-starter/pkg/config"
 )
 
 func main() {
@@ -94,7 +94,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/otyang/go-pkg/response"
+	"github.com/otyang/go-starter/pkg/response"
 )
 
 func main() {
@@ -179,7 +179,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/otyang/go-pkg/logger"
+	"github.com/otyang/go-starter/pkg/logger"
 )
 
 func main() {
@@ -255,7 +255,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/otyang/go-pkg/datastore"
+	"github.com/otyang/go-starter/pkg/datastore"
 )
 
 func main() {
@@ -342,7 +342,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/otyang/go-pkg/datastore"
+	"github.com/otyang/go-starter/pkg/datastore"
 	"github.com/uptrace/bun"
 )
 

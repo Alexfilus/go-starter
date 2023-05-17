@@ -5,12 +5,12 @@ import (
 	"errors"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/datastore"
-	"github.com/otyang/go-pkg/logger"
-	"github.com/otyang/go-pkg/response"
-	"github.com/otyang/yasante/config"
-	"github.com/otyang/yasante/internal/middleware"
-	"github.com/otyang/yasante/internal/zample/entity"
+	"github.com/otyang/go-starter/config"
+	"github.com/otyang/go-starter/internal/middleware"
+	"github.com/otyang/go-starter/internal/zample/entity"
+	"github.com/otyang/go-starter/pkg/datastore"
+	"github.com/otyang/go-starter/pkg/logger"
+	"github.com/otyang/go-starter/pkg/response"
 	"github.com/uptrace/bun"
 )
 

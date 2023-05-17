@@ -3,8 +3,8 @@ package handlercli
 import (
 	"fmt"
 
-	"github.com/otyang/go-pkg/logger"
-	"github.com/otyang/yasante/config"
+	"github.com/otyang/go-starter/config"
+	"github.com/otyang/go-starter/pkg/logger"
 	"github.com/urfave/cli/v3"
 )
 

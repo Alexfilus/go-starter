@@ -8,19 +8,19 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/urfave/cli/v3"
 
-	"github.com/otyang/yasante/internal/event"
-	"github.com/otyang/yasante/internal/zample/entity"
-	handlercli "github.com/otyang/yasante/internal/zample/handler_cli"
-	handlerEvent "github.com/otyang/yasante/internal/zample/handler_event"
-	handlerHttp "github.com/otyang/yasante/internal/zample/handler_http"
-	bRepo "github.com/otyang/yasante/internal/zample/repository/bun"
-	"github.com/otyang/yasante/internal/zample/seeder"
+	"github.com/otyang/go-starter/internal/event"
+	"github.com/otyang/go-starter/internal/zample/entity"
+	handlercli "github.com/otyang/go-starter/internal/zample/handler_cli"
+	handlerEvent "github.com/otyang/go-starter/internal/zample/handler_event"
+	handlerHttp "github.com/otyang/go-starter/internal/zample/handler_http"
+	bRepo "github.com/otyang/go-starter/internal/zample/repository/bun"
+	"github.com/otyang/go-starter/internal/zample/seeder"
 
-	"github.com/otyang/go-pkg/datastore"
-	loggers "github.com/otyang/go-pkg/logger"
-	"github.com/otyang/go-pkg/pubsub"
-	"github.com/otyang/yasante/config"
-	"github.com/otyang/yasante/internal/middleware"
+	"github.com/otyang/go-starter/config"
+	"github.com/otyang/go-starter/internal/middleware"
+	"github.com/otyang/go-starter/pkg/datastore"
+	loggers "github.com/otyang/go-starter/pkg/logger"
+	"github.com/otyang/go-starter/pkg/pubsub"
 )
 
 func RegisterHttpHandlers(

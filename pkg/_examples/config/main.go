@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/otyang/go-pkg/config"
+	"github.com/otyang/go-starter/pkg/config"
 )
 
 func main() {

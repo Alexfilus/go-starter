@@ -7,10 +7,10 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/config"
-	"github.com/otyang/go-pkg/datastore"
-	"github.com/otyang/go-pkg/logger"
-	"github.com/otyang/go-pkg/pubsub"
+	"github.com/otyang/go-starter/pkg/config"
+	"github.com/otyang/go-starter/pkg/datastore"
+	"github.com/otyang/go-starter/pkg/logger"
+	"github.com/otyang/go-starter/pkg/pubsub"
 	"github.com/uptrace/bun"
 )
 

@@ -3,8 +3,8 @@ package seeder
 import (
 	"time"
 
-	"github.com/otyang/go-pkg/utils"
-	"github.com/otyang/yasante/internal/zample/entity"
+	"github.com/otyang/go-starter/internal/zample/entity"
+	"github.com/otyang/go-starter/pkg/utils"
 )
 
 var Users = []entity.User{

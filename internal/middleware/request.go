@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/utils"
+	"github.com/otyang/go-starter/pkg/utils"
 )
 
 func RequestID() fiber.Handler {

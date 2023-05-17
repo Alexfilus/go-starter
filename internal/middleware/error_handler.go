@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/logger"
-	"github.com/otyang/go-pkg/response"
+	"github.com/otyang/go-starter/pkg/logger"
+	"github.com/otyang/go-starter/pkg/response"
 )
 
 var (

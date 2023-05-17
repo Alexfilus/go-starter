@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/nats-io/nats.go"
-	"github.com/otyang/go-pkg/logger"
-	"github.com/otyang/yasante/config"
-	"github.com/otyang/yasante/internal/zample/entity"
+	"github.com/otyang/go-starter/config"
+	"github.com/otyang/go-starter/internal/zample/entity"
+	"github.com/otyang/go-starter/pkg/logger"
 )
 
 type Handler struct {

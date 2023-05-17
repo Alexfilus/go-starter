@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/otyang/go-pkg/logger"
+	"github.com/otyang/go-starter/pkg/logger"
 )
 
 func main() {

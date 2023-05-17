@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/otyang/go-pkg/datastore"
+	"github.com/otyang/go-starter/pkg/datastore"
 )
 
 type IRepository interface {

@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/otyang/go-pkg/response"
-	"github.com/otyang/go-pkg/validators"
+	"github.com/otyang/go-starter/pkg/response"
+	"github.com/otyang/go-starter/pkg/validators"
 )
 
 // ParseBody reads either a json or xml or html forms or urls body
