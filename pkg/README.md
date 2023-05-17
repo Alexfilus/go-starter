@@ -491,9 +491,6 @@ Datastore provides the following interface methods:
 -	`Get(ctx context.Context, key string) (any, error)`  Get gets a key from the cache 
 -	`Set(ctx context.Context, key string, val any, ttl time.Duration) error`  Set sets a key to the cache 
 -	`Del(ctx context.Context, key string) error` // Del deletes a key from the cache
--	`GetMulti(ctx context.Context, keys []string) (map[string]any, error)` Gets Multiple keys, on error it aborts & returns the error 
--	`SetMulti(ctx context.Context, values map[string]any, ttl time.Duration) error` Sets Multiple keys, ...
--	`DelMulti(ctx context.Context, keys []string) error`  Delete Multiple keys, .....
 -	`Clear(ctx context.Context) error` Clear used to flush/clear the cache 
 -	`Close() error` Close closes the connection 
 
