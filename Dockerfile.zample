@@ -1,5 +1,4 @@
 FROM golang:alpine as build
-# LABEL maintainer="Young Otutu <https://github.com/otyang>"
 
 WORKDIR /newbuild
 COPY  go.* ./
