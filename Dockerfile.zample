@@ -1,0 +1,21 @@
+FROM golang:alpine as build
+# LABEL maintainer="Young Otutu <https://github.com/otyang>"
+
+WORKDIR /newbuild
+COPY  go.* ./
+RUN go mod download 
+COPY . . 
+RUN CGO_ENABLED=0 GOOS=linux go build -o bin/zample  cmd/zample/main.go
+
+
+
+## Deploy the application binary into a lean image and binary size
+
+FROM alpine:latest
+WORKDIR /app
+
+# Copy the Pre-built binary & the config file from the previous stage.
+COPY --from=build /newbuild/bin/zample  /newbuild/cmd/zample/config.toml  /newbuild/cmd/zample/nats.creds ./ 
+ENV DB_URL file::memory:?cache=shared
+EXPOSE 4000
+ENTRYPOINT ["./zample", "--configFile", "./config.toml"]
