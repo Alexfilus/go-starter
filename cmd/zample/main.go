@@ -25,7 +25,7 @@ func main() {
 			middleware.TimeTakenToProcessEndpoint(),
 			middleware.Cors(),
 			middleware.RequestID(),
-			middleware.ErrorHandler(log),
+			middleware.ErrorHandler(log), // take note of arrangement or order.
 		)
 
 		zample.RegisterHttpHandlers(ctx, router, cfg, log, db)

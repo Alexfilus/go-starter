@@ -1,12 +1,10 @@
-CONFIG_FILE=config.toml
-
 default: run
 
  
 test: test test-coverage test-integration
 
 run:
-	go run cmd/zample/*.go -configFile=${CONFIG_FILE} 
+	go run cmd/zample/main.go --configFile="cmd/zample/config.toml"
 
 
 # It adds any missing module requirements necessary to build the current module’s packages and dependencies, and it
