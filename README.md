@@ -1,7 +1,6 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/otyang/go-starter.svg)](https://pkg.go.dev/github.com/otyang/go-starter)
-[![Go Doc](https://godoc.org/github.com/otyang/go-starter?status.png)](http://godoc.org/github.com/otyang/go-starter) 
-[![Code Coverage](https://codecov.io/gh/otyang/go-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/otyang/go-starter)
+starter)
 [![Go Report Card](https://goreportcard.com/badge/github.com/otyang/go-starter)](https://goreportcard.com/report/github.com/otyang/go-starter)
 
 # Go Starter Kit (Boilerplate) 
