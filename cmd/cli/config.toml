@@ -9,9 +9,6 @@ URL = "file::memory:?cache=shared"
 Driver = "sqliteshim"
 PrintQueriesToStdout = true
 
-[Nats]
-URL = "tls://connect.ngs.global"
-CredentialFile = "./nats.creds"
 
 [Redis]
 URL = ".."

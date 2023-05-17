@@ -14,22 +14,21 @@ func main() {
 	flag.Parse()
 
 	var (
-		ctx                         = context.Background()
-		cfg, log, event, db, router = config.InitialiseSetup(configFile, ctx)
+		ctx                  = context.Background()
+		cfg, log, db, router = config.InitialiseSetup(configFile, ctx)
 	)
 
 	defer db.Close()
 
 	{
 		router.Use(
+			middleware.TimeTakenToProcessEndpoint(),
 			middleware.Cors(),
 			middleware.RequestID(),
 			middleware.ErrorHandler(log),
-			middleware.TimeTakenToProcessEndpoint(),
 		)
 
 		zample.RegisterHttpHandlers(ctx, router, cfg, log, db)
-		zample.RegisterEventsHandlers(ctx, event, cfg, log, db)
 		zample.RegisterMigrationAndSeeder(ctx, cfg, log, db)
 	}
 

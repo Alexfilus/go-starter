@@ -10,7 +10,6 @@ import (
 	"github.com/otyang/go-starter/pkg/config"
 	"github.com/otyang/go-starter/pkg/datastore"
 	"github.com/otyang/go-starter/pkg/logger"
-	"github.com/otyang/go-starter/pkg/pubsub"
 	"github.com/uptrace/bun"
 )
 
@@ -33,11 +32,6 @@ type Config struct {
 		PrintQueriesToStdout bool   `toml:"PrintQueriesToStdout" env:"DB_PRINT_TO_STDOUT"  env-default:"true"`
 	} `toml:"DB"`
 
-	Nats struct {
-		URL            string `toml:"URL" env:"NATS_URL"  env-default:"tls://connect.ngs.global"`
-		CredentialFile string `toml:"CredentialFile" env:"NATS_CREDENTIAL_FILE"  env-default:"./credentials_nats.txt"`
-	} `toml:"Nats"`
-
 	Redis struct {
 		URL       string `toml:"URL" env:"REDIS_URI" env-default:".." `
 		EnableTLS bool   `toml:"EnableTLS" env:"REDIS_ENABLE_TLS" env-default:"true"`
@@ -52,7 +46,6 @@ func InitialiseSetup(configFile *string, ctx context.Context,
 ) (
 	*Config,
 	*logger.SlogLogger,
-	pubsub.IEvent,
 	*bun.DB,
 	*fiber.App,
 ) {
@@ -74,8 +67,7 @@ func InitialiseSetup(configFile *string, ctx context.Context,
 	var (
 		router = fiber.New(fiber.Config{})
 		db     = datastore.NewDBConnection(cfg.DB.Driver, cfg.DB.URL, cfg.DB.PoolMax, cfg.DB.PrintQueriesToStdout)
-		event  = pubsub.NewNatsFromCredential(cfg.Nats.URL, cfg.Nats.CredentialFile)
 	)
 
-	return cfg, log, event, db, router
+	return cfg, log, db, router
 }

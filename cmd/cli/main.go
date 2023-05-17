@@ -17,8 +17,8 @@ func main() {
 	flag.Parse()
 
 	var (
-		ctx               = context.Background()
-		cfg, log, _, _, _ = config.InitialiseSetup(configFile, ctx)
+		ctx            = context.Background()
+		cfg, log, _, _ = config.InitialiseSetup(configFile, ctx)
 	)
 
 	app := &cli.App{}

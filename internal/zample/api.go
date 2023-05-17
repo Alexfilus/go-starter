@@ -2,16 +2,13 @@ package zample
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/uptrace/bun"
 	"github.com/urfave/cli/v3"
 
-	"github.com/otyang/go-starter/internal/event"
 	"github.com/otyang/go-starter/internal/zample/entity"
 	handlercli "github.com/otyang/go-starter/internal/zample/handler_cli"
-	handlerEvent "github.com/otyang/go-starter/internal/zample/handler_event"
 	handlerHttp "github.com/otyang/go-starter/internal/zample/handler_http"
 	bRepo "github.com/otyang/go-starter/internal/zample/repository/bun"
 	"github.com/otyang/go-starter/internal/zample/seeder"
@@ -20,7 +17,6 @@ import (
 	"github.com/otyang/go-starter/internal/middleware"
 	"github.com/otyang/go-starter/pkg/datastore"
 	loggers "github.com/otyang/go-starter/pkg/logger"
-	"github.com/otyang/go-starter/pkg/pubsub"
 )
 
 func RegisterHttpHandlers(
@@ -47,31 +43,6 @@ func RegisterHttpHandlers(
 			handler.Profile,
 		)
 		group.Post("/validation-in-handler", handler.Profile2)
-	}
-}
-
-func RegisterEventsHandlers(
-	ctx context.Context,
-	ps pubsub.IEvent,
-	config *config.Config,
-	log loggers.Interface,
-	db datastore.OrmDB,
-) {
-	var (
-		repo    = bRepo.NewRepository(db)
-		handler = handlerEvent.NewHandler(repo, config, log)
-	)
-
-	{
-		ps.Subscribe(context.TODO(), event.SubjectStockUpdates, handler.SubscribeStocks)
-
-		err := ps.Publish(context.TODO(), event.SubjectStockUpdates, &event.Stock{
-			Symbol: "GOOG",
-			Price:  200,
-		})
-		if err != nil {
-			fmt.Println(err.Error())
-		}
 	}
 }
 

@@ -15,7 +15,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Copy the Pre-built binary & the config file from the previous stage.
-COPY --from=build /newbuild/bin/zample  /newbuild/cmd/zample/config.toml  /newbuild/cmd/zample/nats.creds ./ 
+COPY --from=build /newbuild/bin/zample  /newbuild/cmd/zample/config.toml   ./ 
 ENV DB_URL file::memory:?cache=shared
 EXPOSE 4000
 ENTRYPOINT ["./zample", "--configFile", "./config.toml"]
